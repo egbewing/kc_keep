@@ -14,7 +14,7 @@ def get_active_deliveries(
     headers = {
     'Authorization': 'Basic '
     }
-    params = {'licenseNumber': '050-10055625B58', 'salesDateStart': start_date, 'salesDateEnd': end_date}
+    params = {'licenseNumber': '', 'salesDateStart': start_date, 'salesDateEnd': end_date}
 
     response = requests.get(url, headers=headers, params=params)
     if response.ok:
@@ -32,7 +32,7 @@ def complete_deliveries(row: pd.Series) -> None:
     headers = {
         'Authorization': 'Basic '
         }    
-    params = {'licenseNumber': '050-10055625B58'}
+    params = {'licenseNumber': ''}
 
     response = requests.get(url, headers=headers, params=params)
     d['AcceptedPackages'] = [x.get('PackageLabel') for x in response.json().get('Transactions')]
