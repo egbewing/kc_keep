@@ -12,7 +12,7 @@ def get_active_deliveries(
     url = "https://api-or.metrc.com/sales/v1/deliveries/active"
 
     headers = {
-    'Authorization': 'Basic WnZDREZyVVRlU3hWY1NHSGlmTjdoTWRCaWd0aHdQcU43VkJEaHBsZVBzZ1k1aWFsOnlENUtZODNIejVUWFI0QUNBZ0dPSzRCN0F3UGJLVFZ3ODNPME1mR0VwenI1MmxOMQ=='
+    'Authorization': 'Basic '
     }
     params = {'licenseNumber': '050-10055625B58', 'salesDateStart': start_date, 'salesDateEnd': end_date}
 
@@ -30,7 +30,7 @@ def complete_deliveries(row: pd.Series) -> None:
     
     url = f"https://api-or.metrc.com//sales/v1/delivery/{d['Id']}"
     headers = {
-        'Authorization': 'Basic WnZDREZyVVRlU3hWY1NHSGlmTjdoTWRCaWd0aHdQcU43VkJEaHBsZVBzZ1k1aWFsOnlENUtZODNIejVUWFI0QUNBZ0dPSzRCN0F3UGJLVFZ3ODNPME1mR0VwenI1MmxOMQ=='
+        'Authorization': 'Basic '
         }    
     params = {'licenseNumber': '050-10055625B58'}
 
